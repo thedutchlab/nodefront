@@ -1,0 +1,19 @@
+{
+  "name": "nodefront",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.10.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "ejs": "^2.0.8",
+    "express": "~4.10.6",
+    "morgan": "~1.5.1",
+    "request": "^2.51.0",
+    "serve-favicon": "~2.2.0",
+    "zabbix": "^0.1.0"
+  }
+}

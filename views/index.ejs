@@ -1,0 +1,161 @@
+<!doctype html>
+    <html lang=en-us>
+    <head>
+        <title>Monitor <%=title%></title>
+        <link href="/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Share:400,700' rel='stylesheet' type='text/css'>
+        <link href="/stylesheets/style.css" rel="stylesheet">
+        <link href="/stylesheets/<%=source%>.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            
+            <div class="col-sm-3 col-md-2 sidebar">
+                <h1><%=title%><span>network</span></h1>
+                <div id="issues">
+                    <h4>Latest issues</h4>
+                    <ul class="trigger_list"></ul>
+                </div>
+            </div>
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" id="container">
+
+            </div>
+            
+            <div id="refresh">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        
+        <script id="zabbix_host_template" type="x-tmpl-mustache">
+            <div id="data_{{host_id}}" class="col-xs-6 col-md-4 col-lg-3 host_item">
+                <div class="host_data col-md-12">
+                    <div class="host col-md-8">{{hostname}}</div>
+                    <div class="ip_1 col-md-4"><span class="pull-right">{{ip_1}}</span></div>
+                </div>
+                <div class="wrapper col-md-12">
+                    <div class="cpu col-md-4">
+                        <div class="raw">CPU load</div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="value">{{ cpu }}</div>
+                    </div>
+                    <div class="mem col-md-4">
+                        <div class="raw">MEM</div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="value">{{ mem }}%</div>
+                    </div>
+                    <div class="dsk col-md-4">
+                        <div class="raw">DISK</div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="value">{{ dsk }}%</div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        
+        <script id="newrelic_host_template" type="x-tmpl-mustache">
+            <div id="data_{{host_id}}" class="col-xs-6 col-md-4 col-lg-3 host_item">
+                <div class="host_data col-md-12">
+                    <div class="host col-md-8">{{hostname}}</div>
+                    <div class="health_status pulse col-md-4"><span class="pull-right {{health_status}}">{{health_status}}</span></div>
+                </div>
+                <div class="wrapper col-md-12">
+                    <div class="cpu col-md-4">
+                        <div class="raw">CPU load</div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="value">{{ cpu }}%</div>
+                    </div>
+                    <div class="mem col-md-4">
+                        <div class="raw">MEM</div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="value">{{ mem }}%</div>
+                    </div>
+                    <div class="dsk col-md-4">
+                        <div class="raw">DISK</div>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="value">{{ dsk }}%</div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        
+        <script src="/components/jquery/dist/jquery.min.js"></script>
+        <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/components/mustache/mustache.min.js"></script>
+        <script src="/javascripts/<%=source%>.js"></script>
+
+    </body>
+</html>

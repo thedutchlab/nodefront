@@ -1,0 +1,276 @@
+body {
+    padding: 20px;
+    font-family: 'Share', cursive;
+    font-size: 11px;
+    background: url('/images/bg@x2.png') #111;
+    background-size: 100px 100px;
+    color: #fff;
+}
+
+a {
+    color: #e5e5e5;
+}
+
+/* ################################################################## host item */
+
+.host_item {
+    
+}
+
+.raw {
+    width: 100%;
+    text-align: center;
+}
+.host_data {
+    border-top: 1px solid #35464e;
+    border-bottom: 1px solid #35464e;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.host_data .host, .host_data .ip_1 {
+    color: #6fe15a;
+}
+
+.value {
+    width: 100%;
+    text-align: center;
+}
+.host_item .wrapper {
+    overflow: hidden;
+    border-bottom: 1px solid #35464e;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.host_item ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.host_item ul li {
+    background: -webkit-linear-gradient(left, 
+        #20272d 0%,
+        #20272d 10%,
+        #35464e 10%,
+        #35464e 40%,
+        #20272d 40%,
+        #20272d 60%,
+        #35464e 60%,
+        #35464e 90%,
+        #20272d 90%,
+        #20272d 100%);
+    width: 100%;
+    height: 3px;
+    margin: 1px 0;
+}
+
+.host_item ul li.active {
+    background: -webkit-linear-gradient(left, 
+        #658681  0%,
+        #658681  10%,
+        #d9fafa 10%,
+        #d9fafa 40%,
+        #658681  40%,
+        #658681  60%,
+        #d9fafa 60%,
+        #d9fafa 90%,
+        #658681  90%,
+        #658681  100%);
+}
+
+.host_item .mem ul li.active {
+    background: -webkit-linear-gradient(left, 
+        #7d8764 0%,
+        #7d8764 10%,
+        #ffffe8 10%,
+        #ffffe8 40%,
+        #7d8764 40%,
+        #7d8764 60%,
+        #ffffe8 60%,
+        #ffffe8 90%,
+        #7d8764 90%,
+        #7d8764 100%);
+}
+
+/* sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0 0 0 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar h1 {
+    font-size: 28px;
+}
+
+.sidebar h1 span {
+    font-size: 12px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: #d9fafa;
+}
+
+/* ################################################################## trigger item */
+
+ul.trigger_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 9px;
+}
+
+ul.trigger_list li span {
+    display: block;
+    text-transform: uppercase;
+    border-top: 1px solid #35464e;
+    border-bottom: 1px solid #35464e;
+    text-transform: uppercase;
+    color: #6fe15a;
+}
+
+/* ################################################################## refresh icon */
+
+#refresh ul {
+    position: absolute;
+	right: 40px;
+    bottom: 20px;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#refresh li {
+    position: absolute;
+    width: 20px ;
+    height: 20px ;
+    background: #d9fafa;
+    opacity: 0.8;
+}
+
+#refresh li:nth-child(2) {
+  animation:         rotation1 3s infinite;  
+  -o-animation:      rotation1 3s infinite;
+  -moz-animation:    rotation1 3s infinite;
+  -webkit-animation: rotation1 3s infinite;
+}
+
+#refresh li:nth-child(3) {
+  animation:         rotation2 3s infinite;  
+  -o-animation:      rotation2 3s infinite;
+  -moz-animation:    rotation2 3s infinite;
+  -webkit-animation: rotation2 3s infinite;
+  animation-delay:         0.2s;
+	-o-animation-delay:      0.2s;
+	-moz-animation-delay:    0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+#refresh li:nth-child(4) {
+  animation:         rotation3 3s infinite;  
+  -o-animation:      rotation3 3s infinite;
+  -moz-animation:    rotation3 3s infinite;
+  -webkit-animation: rotation3 3s infinite;
+  animation-delay:         0.4s;
+	-o-animation-delay:      0.4s;
+	-ms-animation-delay:     0.4s;
+	-moz-animation-delay:    0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+/* first rotation */
+@keyframes rotation1 {
+	from     { transform:rotate(-360deg); }
+  30%,60%  { transform:rotate(20deg); }
+  80%      { transform:rotate(0); }
+}
+@-o-keyframes rotation1 {
+	from     { -o-transform:rotate(-360deg); }
+  30%,60%  { -o-transform:rotate(20deg); }
+  80%      { -o-transform:rotate(0); }
+}
+@-moz-keyframes rotation1 {
+	from     { -moz-transform:rotate(-360deg); }
+  30%,60%  { -moz-transform:rotate(20deg); }
+  80%      { -moz-transform:rotate(0); }
+}
+@-webkit-keyframes rotation1 {
+	from     { -webkit-transform:rotate(-360deg); }
+  30%,60%  { -webkit-transform:rotate(20deg); }
+  80%      { -webkit-transform:rotate(0); }
+}
+
+/* second rotation */
+@keyframes rotation2 {
+	from     { transform:rotate(-360deg); }
+  30%, 60% { transform:rotate(45deg); }
+  80%      { transform:rotate(0); }
+}
+@-o-keyframes rotation2 {
+	from     { -o-transform:rotate(-360deg); }
+  30%, 60% { -o-transform:rotate(45deg); }
+  80%      { -o-transform:rotate(0); }
+}
+@-moz-keyframes rotation2 {
+	from     { -moz-transform:rotate(-360deg); }
+  30%, 60% { -moz-transform:rotate(45deg); }
+  80%      { -moz-transform:rotate(0); }
+}
+@-webkit-keyframes rotation2 {
+	from     { -webkit-transform:rotate(-360deg); }
+  30%, 60% { -webkit-transform:rotate(45deg); }
+  80%      { -webkit-transform:rotate(0); }
+}
+
+/* third rotation */
+@keyframes rotation3 {
+	from    { transform:rotate(-360deg); }
+  30%,60% { transform:rotate(75deg); }
+  80%     { transform:rotate(0); }
+}
+@-o-keyframes rotation3 {
+	from    { -o-transform:rotate(-360deg); }
+  30%,60% { -o-transform:rotate(75deg); }
+  80%     { -o-transform:rotate(0); }
+}
+@-moz-keyframes rotation3 {
+	from    { -moz-transform:rotate(-360deg); }
+  30%,60% { -moz-transform:rotate(75deg); }
+  80%     { -moz-transform:rotate(0); }
+}
+@-webkit-keyframes rotation3 {
+	from    { -webkit-transform:rotate(-360deg); }
+  30%,60% { -webkit-transform:rotate(75deg); }
+  80%     { -webkit-transform:rotate(0); }
+}
+.sidebar #refresh {
+    display: none;
+}
+
+/* pulse */
+
+@-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(1); }
+	30% { -webkit-transform: scale(1); }
+	40% { -webkit-transform: scale(1.08); }
+	50% { -webkit-transform: scale(1); }
+	60% { -webkit-transform: scale(1); }
+	70% { -webkit-transform: scale(1.05); }
+	80% { -webkit-transform: scale(1); }
+	100% { -webkit-transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: 'pulse_animation';
+	-webkit-animation-duration: 5000ms;
+	-webkit-transform-origin:70% 70%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}

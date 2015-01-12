@@ -1,0 +1,22 @@
+{
+  "name": "nodefront",
+  "version": "0.0.0",
+  "authors": [
+    "Rutger Heijmerikx <rutger@heijmerikx.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "mustache": "~1.0.0",
+    "bootstrap": "~3.3.1"
+  }
+}
