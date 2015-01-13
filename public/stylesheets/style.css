@@ -1,7 +1,7 @@
 body {
     padding: 20px;
     font-family: 'Share', cursive;
-    font-size: 11px;
+    font-size: 14px;
     background: url('/images/bg@x2.png') #111;
     background-size: 100px 100px;
     color: #fff;
@@ -21,12 +21,14 @@ a {
     width: 100%;
     text-align: center;
 }
+
 .host_data {
     border-top: 1px solid #35464e;
     border-bottom: 1px solid #35464e;
     padding: 10px 0;
     text-transform: uppercase;
 }
+
 .host_data .host, .host_data .ip_1 {
     color: #6fe15a;
 }
@@ -35,6 +37,7 @@ a {
     width: 100%;
     text-align: center;
 }
+
 .host_item .wrapper {
     overflow: hidden;
     border-bottom: 1px solid #35464e;
@@ -47,49 +50,64 @@ a {
     padding: 0;
     list-style: none;
 }
+
 .host_item ul li {
     background: -webkit-linear-gradient(left, 
-        #20272d 0%,
-        #20272d 10%,
+        #35464e 0%,
         #35464e 10%,
-        #35464e 40%,
+        #20272d 10%,
         #20272d 40%,
-        #20272d 60%,
+        #35464e 40%,
         #35464e 60%,
-        #35464e 90%,
+        #20272d 60%,
         #20272d 90%,
-        #20272d 100%);
+        #35464e 90%,
+        #35464e 100%);
     width: 100%;
-    height: 3px;
-    margin: 1px 0;
+    height: 8px;
+    margin: 2px 0;
 }
 
 .host_item ul li.active {
     background: -webkit-linear-gradient(left, 
-        #658681  0%,
-        #658681  10%,
+        #d9fafa 0%,
         #d9fafa 10%,
+        #658681 10%,
+        #658681 40%,
         #d9fafa 40%,
-        #658681  40%,
-        #658681  60%,
         #d9fafa 60%,
+        #658681 60%,
+        #658681 90%,
         #d9fafa 90%,
-        #658681  90%,
-        #658681  100%);
+        #d9fafa 100%);
 }
 
 .host_item .mem ul li.active {
     background: -webkit-linear-gradient(left, 
-        #7d8764 0%,
-        #7d8764 10%,
+        #ffffe8 0%,
         #ffffe8 10%,
-        #ffffe8 40%,
+        #7d8764 10%,
         #7d8764 40%,
-        #7d8764 60%,
+        #ffffe8 40%,
         #ffffe8 60%,
-        #ffffe8 90%,
+        #7d8764 60%,
         #7d8764 90%,
-        #7d8764 100%);
+        #ffffe8 90%,
+        #ffffe8 100%);
+}
+
+.host_item .cpu ul li.active {
+    background: -webkit-linear-gradient(left, 
+        #FFB3B3  0%,
+        #FFB3B3  10%,
+        #FFE5E5  10%,
+        #FFE5E5  40%,
+        #FFB3B3  40%,
+        #FFB3B3  60%,
+        #FFE5E5  60%,
+        #FFE5E5  90%,
+        #FFB3B3  90%,
+        #FFB3B3  100%);
 }
 
 /* sidebar */
@@ -117,6 +135,12 @@ a {
     color: #d9fafa;
 }
 
+/* ################################################################## slides */
+
+#container .group{ position:relative; }
+#container .group .row{ position:absolute; display:none}
+#container .group .row:first-child{display:block}
+
 /* ################################################################## trigger item */
 
 ul.trigger_list {
@@ -133,6 +157,12 @@ ul.trigger_list li span {
     border-bottom: 1px solid #35464e;
     text-transform: uppercase;
     color: #6fe15a;
+}
+
+/* ################################################################## flex slider */
+
+.flexslider {
+    background: transparent;
 }
 
 /* ################################################################## refresh icon */

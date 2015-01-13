@@ -24,6 +24,8 @@ $(function() {
         var data = getHostData(function(data) {
             //console.log(data);
             // init the containers for the hosts
+            var hosts = [];
+            
             $.each( data, function( key, val ) {
                 
                 // init mustache templates with values.
@@ -37,10 +39,12 @@ $(function() {
                     dsk: val.disk_usage_percentage,
                     ip_1: val.ip_1
                 });
-                $('#container').append(rendered);
+                
+                hosts.push(rendered);
                 
             });
             
+            slide(hosts);
             // update UI
             updateHostsUI(data);
             
@@ -51,8 +55,6 @@ $(function() {
     // TODO
     // Need to do this more fancy!
     function updateHostsUI(data){
-        
-        console.log("Updating UI with new data");
         
         // reset ui first
         $("li").removeClass('active');

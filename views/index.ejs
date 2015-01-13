@@ -4,6 +4,7 @@
         <title>Monitor <%=title%></title>
         <link href="/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Share:400,700' rel='stylesheet' type='text/css'>
+        
         <link href="/stylesheets/style.css" rel="stylesheet">
         <link href="/stylesheets/<%=source%>.css" rel="stylesheet">
     </head>
@@ -19,7 +20,7 @@
             </div>
 
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" id="container">
-
+                <div class="group"></div>
             </div>
             
             <div id="refresh">
@@ -33,9 +34,8 @@
             
         </div>
         
-        
         <script id="zabbix_host_template" type="x-tmpl-mustache">
-            <div id="data_{{host_id}}" class="col-xs-6 col-md-4 col-lg-3 host_item">
+            <div id="data_{{host_id}}" class="col-xs-6 col-md-4 host_item">
                 <div class="host_data col-md-12">
                     <div class="host col-md-8">{{hostname}}</div>
                     <div class="ip_1 col-md-4"><span class="pull-right">{{ip_1}}</span></div>
@@ -94,7 +94,7 @@
         </script>
         
         <script id="newrelic_host_template" type="x-tmpl-mustache">
-            <div id="data_{{host_id}}" class="col-xs-6 col-md-4 col-lg-3 host_item">
+            <div id="data_{{host_id}}" class="col-xs-6 col-md-4 host_item">
                 <div class="host_data col-md-12">
                     <div class="host col-md-8">{{hostname}}</div>
                     <div class="health_status pulse col-md-4"><span class="pull-right {{health_status}}">{{health_status}}</span></div>
@@ -155,6 +155,7 @@
         <script src="/components/jquery/dist/jquery.min.js"></script>
         <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/components/mustache/mustache.min.js"></script>
+        <script src="/javascripts/general.js"></script>
         <script src="/javascripts/<%=source%>.js"></script>
 
     </body>

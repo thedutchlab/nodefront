@@ -19,12 +19,28 @@ This is a basic express.js app without the node modules in git. Install should b
 nodemon bin/www
 ```
 
+## Production
+
+Run as you wish, the below is an option on how to do it using Crontab
+
+```
+crontab -u youruser -e
+```
+
+In your crontab
+
+```
+@reboot /usr/local/bin/forever start /home/youruser/path/to/your/app.js
+```
+
+(Source: http://stackoverflow.com/questions/13385029/automatically-start-forever-node-on-system-restart)
+
 ## Env variables
 
 ### Required environment variables
 
 * company_name
-* source (zabbix or new_relic)
+* data_source (zabbix or new_relic)
 
 Required environment variables for platform (choose to fill Zabbix or New Relic based on which one you need)
 
@@ -58,7 +74,13 @@ Quite a lot already...
 * Proper error messages if environment data isn't correct
 * Refactor with respect to many js and node.js best practices.
 * More (general) UI enhancements
+* More than webkit only browser support
 
 # Changelog
 
-0.0.1 First release (After Zabbix i've decided to add NR support too, which might show...)
+### 0.0.2
+* Introduced bigger graphs
+* basic rotating logic to rotate server data if there are many hosts to monitor.
+
+### 0.0.1
+* First release (After Zabbix I've decided to add NR support too, which might show...)
