@@ -1,3 +1,15 @@
 .orange {
     color: orange;
 }
+
+ul.trigger_list li.downtime span, ul.trigger_list li.criticalalert span {
+    color: #ff0000;
+}
+
+ul.trigger_list li.deployment span {
+    color: #72d4ff;
+}
+
+ul.trigger_list li.caution span {
+    color: #dfe10f;
+}

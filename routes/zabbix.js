@@ -6,7 +6,7 @@ var zabbix = require('../lib/zabbix');
 router.get('/hostdata', function(req, res) {
     var data = zabbix.getHostData(function(data){
         
-        console.log("length: " + data.length);
+        //console.log("length: " + data.length);
         res.send(JSON.stringify(data));
         
     }); 
@@ -16,7 +16,7 @@ router.get('/hostdata', function(req, res) {
 router.get('/triggerdata', function(req, res) {
     var data = zabbix.getTriggers(function(data){
         
-        console.log("length: " + data.length);
+        //console.log("length: " + data.length);
         res.send(JSON.stringify(data));
         
     });

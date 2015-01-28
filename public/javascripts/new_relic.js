@@ -14,7 +14,7 @@ $(function() {
             updateTriggersUI(data);
         });
         
-    }, 5000);
+    }, 10000);
     
     // ########################################################################### HOSTS
     
@@ -43,7 +43,7 @@ $(function() {
                 hosts.push(rendered);
             });
             
-            slide(hosts);
+            slide(hosts, 12);
             // update UI
             updateHostsUI(data);
             
@@ -105,22 +105,33 @@ $(function() {
     // update all data for every hosts that was initialized.
     function updateTriggersUI(data){
         // init html for the trigger
-        
+        var type = '';
+
         $('ul.trigger_list').html("");
 
         // init the containers for the hosts
         $.each( data, function( key, val ) {
-            $('ul.trigger_list').append('<li>'+'<span>'+val.host+'</span>'+val.description+'</li>');
+
+            if (val.title.indexOf("downtime") != -1) {
+                type = 'downtime'
+            } else if (val.title.indexOf("criticalalert") != -1) {
+                type = 'criticalalert'
+            } else if (val.title.indexOf("caution") != -1) {
+                type = 'caution'
+            } else if (val.title.indexOf("deployment") != -1) {
+                type = 'deployment'
+            }
+            $('ul.trigger_list').append('<li class='+ type +'>'+'<span>'+val.title+'</span>'+val.pubDate+'</li>');
         });        
     }
     
     function getTriggerData(callback){
         
-//        $('#refresh').fadeIn();
-//        $.getJSON( "/new_relic/triggerdata", function( data ) {
-//            callback(data);
-//            $('#refresh').fadeOut();
-//        });
+        $('#refresh').fadeIn();
+        $.getJSON( "/new_relic/triggerdata", function( data ) {
+            callback(data);
+            $('#refresh').fadeOut();
+        });
     };
     
 });

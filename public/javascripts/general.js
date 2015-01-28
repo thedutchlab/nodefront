@@ -1,15 +1,17 @@
+var sndStart = new Audio("/sounds/start.wav");
+sndStart.play();
 
-function slide(hosts){
-    // Calculate number hosts and if there are more than 6 hosts use a slider,
-    // devide the number by 9 and spread it over several 'slides'.
-    
-    if (hosts.length > 9) {
-        var slides = Math.ceil(hosts.length/9);
+function slide(hosts, hosts_per_slide){
+    // Calculate number hosts and if there are more than x (hosts_per_slider) hosts use a slider,
+    // devide the number by hosts_per_slider and spread it over several 'slides'.
 
-        // split the hosts array into chunks of 9 hosts
+    if (hosts.length > hosts_per_slide) {
+        var slides = Math.ceil(hosts.length/hosts_per_slide);
+
+        // split the hosts array into chunks of x (hosts_per_slide) hosts
         var hostArrays = [];
         while (hosts.length > 0) {
-            hostArrays.push(hosts.splice(0, 9));
+            hostArrays.push(hosts.splice(0, hosts_per_slide));
         }
 
         for (var i = 0; i < slides; i++) {
@@ -41,7 +43,7 @@ function slide(hosts){
         animateBG();
 
     } else {
-        // less then 9 hosts, display without rotating logic
+        // less then x (hosts_per_slide) hosts, display without rotating logic
         for(var i=0; i < hosts.length; i++) {
             $(".group").append(hosts[i]);
         }

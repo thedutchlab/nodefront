@@ -14,7 +14,7 @@ $(function() {
             updateTriggersUI(data);
         });
         
-    }, 5000);
+    }, 10000);
     
     // ########################################################################### HOSTS
     
@@ -44,7 +44,7 @@ $(function() {
                 
             });
             
-            slide(hosts);
+            slide(hosts, 12);
             // update UI
             updateHostsUI(data);
             

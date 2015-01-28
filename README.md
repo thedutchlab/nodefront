@@ -55,6 +55,7 @@ Required environment variables for platform (choose to fill Zabbix or New Relic 
 
 * new_relic_servers_endpoint (ie: https://api.newrelic.com/v2/servers.json)
 * new_relic_apikey (You can find it on NR: your account -> integrations -> data sharing)
+* new_relic_alert_feed (You can find the RSS feed link in the "recent events" column.)
 
 ## Refresh rate
 
@@ -67,6 +68,7 @@ Refresh rate is set in the zabbix.js or new_relic.js files for now.
 Quite a lot already...
 
 * Doublecheck if all values used are really OK.
+* Make shown host rows (per slide) configurable
 * Alert/Issue data for New Relic
 * Set and Update CPU bars
 * UI support for many hosts
@@ -78,9 +80,14 @@ Quite a lot already...
 
 # Changelog
 
+### 0.0.3
+* Added startup sound.
+* Added NewRelic (rss based) alert feed.
+* Refresh rate set to 10 seconds for now.
+
 ### 0.0.2
 * Introduced bigger graphs
 * basic rotating logic to rotate server data if there are many hosts to monitor.
 
 ### 0.0.1
-* First release (After Zabbix I've decided to add NR support too, which might show...)
+* First release (After Zabbix I've decided to add New Relic support too, which might show...)
